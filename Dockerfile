@@ -11,7 +11,4 @@ RUN apt-get update && \
     curl -fsSL https://downloads.slack-edge.com/slack-cli/install.sh | bash && \
     ln -s /root/.slack/bin/slack /usr/local/bin/slack-cli
 
-# Cache dependencies
-RUN deno cache import_map.json
-
 CMD ["slack-cli", "run"]
